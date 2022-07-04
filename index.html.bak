@@ -32,7 +32,13 @@ const map = new mapboxgl.Map({
     maxZoom: 60,
     pitch: 45,
 });
-
+//add direction 
+map.addControl(
+new MapboxDirections({
+accessToken: mapboxgl.accessToken
+}),
+'top-left'
+);
 
 map.on('load', () => {
     
